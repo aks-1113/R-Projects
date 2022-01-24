@@ -33,10 +33,3 @@ for (i in length(PosToAdd))
 #Graph time!
 ggplot (data = hfd2) + 
   geom_col(mapping = aes(x = Name,y = Fin))
-
-ggplot (data = iNat3, aes(x = Average, y = PigeonsPerSqKm)) +
-  geom_point(color = "blue") +
-  labs(x = "PM25C Pollution (ug/m3LC)", y = "Number of Pigeons Per Square Kilometer") +
-  geom_smooth(method = "lm", se = FALSE, color = "red") + 
-  geom_text_repel(aes(label = Borough), size = 4) +
-  ggtitle("The Effect of PM25C Pollution on the Density of Pigeons by Borough")
